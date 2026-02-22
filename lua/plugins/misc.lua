@@ -41,4 +41,37 @@ return {
       require('colorizer').setup()
     end,
   },
+-- Git Blame
+   {
+    -- https://github.com/f-person/git-blame.nvim
+    'f-person/git-blame.nvim',
+    event = 'VeryLazy',
+    opts = {
+      enabled = false, -- disable by default, enabled only on keymap
+      date_format = '%m/%d/%y %H:%M:%S', -- more concise date format
+    },
+   },
+    {
+  -- https://github.com/utilyre/barbecue.nvim
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+    -- https://github.com/SmiteshP/nvim-navic
+      "SmiteshP/nvim-navic",
+    -- https://github.com/nvim-tree/nvim-web-devicons
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
+    {
+      -- https://github.com/kylechui/nvim-surround
+      'kylechui/nvim-surround',
+      version = "*", -- Use for stability; omit to use `main` branch for the latest features
+      event = "VeryLazy",
+      opts = {}
+    }
+  }
+  
 }
