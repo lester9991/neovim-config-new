@@ -8,6 +8,8 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
+local keymap = vim.keymap
+
 -- save file
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 
@@ -85,3 +87,12 @@ vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", '<leader>tt', ':term<CR>i')
 vim.keymap.set("t", '<C-space>', '<C-\\><C-n>')
 vim.keymap.set("t", '<C-q>', 'exit<CR>')
+
+vim.keymap.set("n", "<leader>qo", ":copen<CR>")  -- open quickfix list
+vim.keymap.set("n", "<leader>qf", ":cfirst<CR>") -- jump to first quickfix list item
+vim.keymap.set("n", "<leader>qn", ":cnext<CR>")  -- jump to next quickfix list item
+vim.keymap.set("n", "<leader>qp", ":cprev<CR>")  -- jump to prev quickfix list item
+vim.keymap.set("n", "<leader>ql", ":clast<CR>")  -- jump to last quickfix list item
+vim.keymap.set("n", "<leader>qc", ":cclose<CR>") -- close quickfix list
+
+vim.keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>")
