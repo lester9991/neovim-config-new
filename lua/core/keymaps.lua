@@ -84,9 +84,9 @@ vim.keymap.set("n", "j", "jzz")
 vim.keymap.set("n", "k", "kzz")
 
 --terminal
-vim.keymap.set("n", '<leader>tt', ':term<CR>i')
+vim.keymap.set("n", '<leader>tt', ':botright 12sp | terminal<CR>i')
 vim.keymap.set("t", '<C-space>', '<C-\\><C-n>')
-vim.keymap.set("t", '<C-q>', 'exit<CR>')
+vim.keymap.set("t", '<C-q>', '<C-\\><C-n><cmd> q <CR>')
 
 vim.keymap.set("n", "<leader>qo", ":copen<CR>")  -- open quickfix list
 vim.keymap.set("n", "<leader>qf", ":cfirst<CR>") -- jump to first quickfix list item
